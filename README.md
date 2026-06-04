@@ -6,6 +6,10 @@ A task management app built with React and Vite.
 
 Task Manager lets users create tasks, add descriptions, mark tasks as completed, delete tasks, and view task details on a separate page. Tasks are currently persisted in the browser with `localStorage`.
 
+## Preview
+
+![Task Manager preview](./src/assets/Task%20Manager%20Preview.png)
+
 ## Features
 
 - Add tasks with a title and description
