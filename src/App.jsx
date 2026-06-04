@@ -32,6 +32,19 @@ function App() {
     fetchTasks();
   }, []); // when useEffect is used with an empty dependency array, it runs only once when the component mounts
 
+  const [filter, setFilter] = useState("all");
+  const filteredTasks = tasks.filter((task) => {
+    if (filter === "completed") {
+      return task.isCompleted;
+    }
+
+    if (filter === "incomplete") {
+      return !task.isCompleted;
+    }
+
+    return true;
+  });
+
   function onTaskClick(taskId) {
     const newTasks = tasks.map((task) => {
       if (task.id === taskId) {
@@ -58,16 +71,17 @@ function App() {
   }
 
   return (
-    <div className="w-screen h-screen bg-slate-500 flex justify-center p-6">
+    <div className="w-screen h-auto bg-green-950 flex justify-center p-6">
       <div className="w-[500px] space-y-4">
         <h1 className="text-3xl text-slate-100 font-bold text-center">
           Task Manager
         </h1>
         <AddTask onAddClick={onAddClick} />
         <Tasks
-          tasks={tasks}
+          tasks={filteredTasks}
           onTaskClick={onTaskClick}
           onDeleteClick={onDeleteClick}
+          onFilterChange={setFilter}
         />
       </div>
     </div>
