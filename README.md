@@ -75,6 +75,5 @@ src/
 
 - Replace `localStorage` with a fake API
 - Add loading and error states
-- Add task editing
 - Add filters for completed and pending tasks
 - Improve responsive styles
