@@ -73,7 +73,7 @@ src/
 
 ## Planned Improvements
 
-- Replace `localStorage` with a fake API
+- <del>Replace localStorage with a fake API</del>
 - Add loading and error states
-- Add filters for completed and pending tasks
+- <del>Add filters for completed and pending tasks</del>
 - Improve responsive styles
