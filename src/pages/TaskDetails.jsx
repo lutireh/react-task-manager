@@ -9,22 +9,29 @@ function TaskDetails() {
   const description = searchParams.get("description");
   return (
     <div className="w-screen h-screen bg-green-950  p-6 flex justify-center">
-      <div className="w-[500px] space-y-4">
+      <div className="w-full max-w-[500px] space-y-4">
         <div className="flex justify-center relative mb-6">
           <button
             className="absolute left-0 top-o bottom-0 text-slate-100"
             onClick={() => navigate(-1)}
           >
-            <ChevronLeftIcon />
+            <ChevronLeftIcon size={20} />
           </button>
           <h1 className="text-3xl text-slate-100 font-bold text-center">
             Task Details
           </h1>
         </div>
 
-        <div className="bg-green-100 p-4 rounded-md">
-          <h2 className="text-xlfont-bold text-slate-600">{title}</h2>
-          <p className="text-slate-600">{description}</p>
+        <div className="rounded-md bg-green-900 border border-green-800 p-2 min-h-14">
+          <h2
+            className="text-xl font-bold text-green-50 "
+            dangerouslySetInnerHTML={{ __html: title }}
+          />
+
+          <div
+            className=" text-green-50 "
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
         </div>
       </div>
     </div>

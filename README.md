@@ -81,3 +81,4 @@ src/
 - Add loading and error states
 - <del>Add filters for completed and pending tasks</del>
 - Improve responsive styles
+- Improve text editor
